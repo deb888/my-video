@@ -1,3 +1,5 @@
+import { Audio } from "@remotion/media";
+import { staticFile } from "remotion";
 import {
   AbsoluteFill,
   CalculateMetadataFunction,
@@ -61,6 +63,12 @@ const DogHighFive: React.FC = () => {
         overflow: "hidden",
       }}
     >
+      <Audio
+        src={staticFile("carefree.mp3")}
+        volume={0.5}
+        durationInFrames={15 * FPS}
+      />
+
       <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap"
         rel="stylesheet"
